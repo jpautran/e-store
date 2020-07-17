@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 :root {
-    --primary-color: #d4770d;
-    --secondary-color: #054f5c;
+    --primary-color: #fd951f;
+    --secondary-color:#0ec7c7;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
     border: none;
@@ -28,6 +29,7 @@ body {
     margin: 0 auto;
 }
 
+/*== HEADER, FOOTER ==*/
 header, footer {
     background-color: black;
     color: white;
@@ -40,14 +42,14 @@ header div.container {
     display: grid;
     grid-template-columns: 220px auto 280px;
     align-items: center;
-    grid-gap: 34px;
+    grid-gap: 24px;
 }
 
 header div.container a {
     justify-self: start;
 }
 
-/*== LOGO == */
+/*== LOGO ==*/
 .logo h1 {
     color: white;
     font-size: 36px;
@@ -61,8 +63,7 @@ header div.container a {
     letter-spacing: 2px;
 }
 
-/*== HEADER SEARCH == */
-
+/*== HEADER SEARCH ==*/
 .search input {
     width: 100%;
     padding: 8px 16px;
@@ -70,12 +71,10 @@ header div.container a {
     font-size: 16px;
 }
 
-/*== PRIMARY MENU == */
-
+/*== PRIMARY MENU ==*/
 nav.primary ul {
     display: flex;
     justify-content: space-between;
-    margin-right: 10px;
 }
 
 nav.primary ul li a {
