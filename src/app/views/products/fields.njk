@@ -4,7 +4,7 @@
         <select name="category_id">
             {% for category in categories %}
             <option value="{{ category.id}}" {% if product.category_id == category_id %} selected {% endif %}>
-                {{ catergory.name }}
+                {{ category.name }}
             </option>
             {% endfor %}
         </select>
