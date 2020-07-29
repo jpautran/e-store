@@ -1,4 +1,4 @@
-const db = require("../../config/db");
+const db = require('../../config/db');
 
 module.exports = {
     create(data) {
@@ -11,7 +11,7 @@ module.exports = {
                 old_price,
                 price,
                 quantity,
-                status,
+                status
             ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
             RETURNING id
         `
@@ -24,9 +24,9 @@ module.exports = {
             data.old_price,
             data.price,
             data.quantity,
-            data.status,
+            data.status
         ]
 
-        return db. query(query, values);
+        return db.query(query, values);
     },
 }

@@ -3,23 +3,23 @@ const Product = require('../models/Product');
 
 module.exports = {
     create(req, res) {
-        //Pegar categorias
+        //PEGAR CATEGORIAS
         Category.all()
         .then(function(results) {
             const categories = results.rows;
-            return res.render("products/create.njk", { categories });
+            return res.render("products/create.njk", { categories })
         }).catch(function(err) {
             throw new Error(err)
         })
 
     },
     async post(req, res) {
-        //Lógica de salvar
+        // LOGICA DE SALVAR
         const keys = Object.keys(req.body);
 
-        for (key of keys) {
+        for(key of keys) {
             if (req.body[key] == "") {
-                return res.send('Please, fill all fields!');
+                return res.send('Please fill all fields!');
             }
         }
 
@@ -28,6 +28,7 @@ module.exports = {
 
         results = await Category.all();
         const categories = results.rows;
+
 
         return res.render("products/create.njk", { productId, categories });
     }
